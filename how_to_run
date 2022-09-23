@@ -1,0 +1,35 @@
+How To Run
+1) prepare_headers.sh
+2) run_hmmscan.sh
+3) run_diamond.sh
+4) run_bbhsort.sh on each marker manually!
+
+For #4 i did:
+
+  ./run_bbhsort.sh ncbi_dataset/ parB > parBc.diamond.faa
+  ./run_bbhsort.sh ncbi_dataset/ parA_AAA_31 > parA_AAA_31.diamond.faa
+
+Then:
+
+
+Directories tree:
+
+markers
+.
+.
+. . . marker1
+      .
+      .
+      . . . hmmpressed files, Pfam files. See example for more information
+
+
+ncbi_dataset
+.
+.
+. . .data
+     .
+     .
+     . . . <any_id_of_choice>
+           .
+           .
+           . . .<any_filename>[.faa] #.faa extension required
